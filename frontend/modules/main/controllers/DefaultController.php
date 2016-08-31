@@ -15,7 +15,7 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        $this -> layout = 'bootstrap';
+        $this -> layout = 'inner';
         return $this->render('index');
     }
 }
