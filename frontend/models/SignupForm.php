@@ -13,8 +13,7 @@ class SignupForm extends Model
     public $email;
     public $password;
     public $repassword;
-    public $name;
-    public $textArea;
+
 
 
 
@@ -40,13 +39,7 @@ class SignupForm extends Model
 
             ['repassword', 'compare', 'compareAttribute' => 'password'],
 
-            ['name', 'trim'],
-            ['name', 'required'],
-            ['name', 'string', 'min' => 2, 'max' => 255],
 
-            ['textArea', 'trim'],
-            ['textArea', 'required'],
-            ['textArea', 'string', 'max' => 1000],
 
         ];
     }

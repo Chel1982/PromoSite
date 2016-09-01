@@ -2,6 +2,7 @@
 
 namespace app\modules\main\controllers;
 
+use frontend\models\ContactForm;
 use frontend\models\SignupForm;
 
 class MainController extends \yii\web\Controller
@@ -26,7 +27,8 @@ class MainController extends \yii\web\Controller
 
     public function actionContact()
     {
-        $model = new SignupForm();
+        //$this -> layout = 'bootstrap';
+        $model = new ContactForm();
         if ($model -> load(\Yii::$app -> request -> post())){
             print_r ($model -> getAttributes());
             die;

@@ -58,7 +58,6 @@ use yii\bootstrap\Nav;
 
 
 
-
 <?= $this -> render('//common/footer'); ?>
 
 <?php $this->endBody(); ?>
