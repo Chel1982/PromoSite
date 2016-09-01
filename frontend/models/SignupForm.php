@@ -15,8 +15,6 @@ class SignupForm extends Model
     public $repassword;
 
 
-
-
     /**
      * @inheritdoc
      */

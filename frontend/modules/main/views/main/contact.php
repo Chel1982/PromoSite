@@ -29,9 +29,7 @@
                 <div class="contact-right wow fadeInRight">
                     <h2>Send a message</h2>
 
-                    <form action="" class="contact-form" method="post">
-
-                        <?php $form = \yii\bootstrap\ActiveForm::begin(); ?>
+                        <?php $form = \yii\bootstrap\ActiveForm::begin(['options' => ['class' => 'contact-form']]); ?>
 
                         <div class="form-group">
 
@@ -48,7 +46,6 @@
 
                         <?php \yii\bootstrap\ActiveForm::end(); ?>
 
-                    </form>
                 </div>
             </div>
         </div>
