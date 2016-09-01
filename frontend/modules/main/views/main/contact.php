@@ -37,10 +37,9 @@
 
                             <?= $form -> field($model, 'email') -> textInput(['placeholder' => $model->getAttributeLabel('Enter Email')]) -> label(false); ?>
 
-                            <?= $form -> field($model, 'textArea')->textarea(['rows' => 2, 'cols' => 5]) -> label('');?>
+                            <?= $form -> field($model, 'textArea')->textarea(['rows' => 2, 'cols' => 5]) -> label(false);?>
 
                         </div>
-
 
                         <span><?= \yii\helpers\Html::submitButton('SUBMIT',['class' => 'button button-default']); ?></span>
 
