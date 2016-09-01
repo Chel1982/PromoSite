@@ -23,4 +23,11 @@ class MainController extends \yii\web\Controller
 
         return $this->render('register', ['model' => $model]);
     }
+
+    public function actionContact()
+    {
+        $model = new SignupForm();
+
+        return $this->render('contact', ['model' => $model]);
+    }
 }
