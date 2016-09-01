@@ -28,29 +28,25 @@
             <div class="col-md-8 col-sm-6 col-xs-12">
                 <div class="contact-right wow fadeInRight">
                     <h2>Send a message</h2>
-                    <form action="" class="contact-form">
+
+                    <form action="" class="contact-form" method="post">
 
                         <?php $form = \yii\bootstrap\ActiveForm::begin(); ?>
 
                         <div class="form-group">
 
-                            <?= $form -> field($model, 'name') -> textInput(['placeholder' => $model->getAttributeLabel('Name')]); ?>
+                            <?= $form -> field($model, 'name') -> textInput(['placeholder' => $model->getAttributeLabel('Name')]) -> label(false); ?>
+
+                            <?= $form -> field($model, 'email') -> textInput(['placeholder' => $model->getAttributeLabel('Enter Email')]) -> label(false); ?>
+
+                            <?= $form -> field($model, 'textArea')->textarea(['rows' => 2, 'cols' => 5]) -> label('');?>
 
                         </div>
-                        <div class="form-group">
 
-                            <?= $form -> field($model, 'email') -> textInput(['placeholder' => $model->getAttributeLabel('Enter Email')]); ?>
-
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control"></textarea>
-                        </div>
-                        <button type="submit" data-text="SUBMIT" class="button button-default"><span>SUBMIT</span></button>
 
                         <span><?= \yii\helpers\Html::submitButton('SUBMIT',['class' => 'button button-default']); ?></span>
 
                         <?php \yii\bootstrap\ActiveForm::end(); ?>
-
 
                     </form>
                 </div>
