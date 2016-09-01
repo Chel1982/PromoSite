@@ -1,10 +1,7 @@
 <?php
-
 namespace frontend\assets;
-
 use yii\web\AssetBundle;
 use yii\web\View;
-
 /**
  * Main frontend application asset bundle.
  */
@@ -35,7 +32,6 @@ class MainAsset extends AssetBundle
         'yii\bootstrap\BootstrapAsset', // bootstrap.css
         'yii\bootstrap\BootstrapPluginAsset', // bootstrap.js
     ];
-
     public $jsOptions = [
         'position' =>  View::POS_END,
     ];

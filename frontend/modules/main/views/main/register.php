@@ -6,8 +6,8 @@
 
                 <?= $form -> field($model, 'username'); ?>
                 <?= $form -> field($model, 'email'); ?>
-                <?= $form -> field($model, 'password'); ?>
-                <?= $form -> field($model, 'repassword'); ?>
+                <?= $form -> field($model, 'password') -> passwordInput(); ?>
+                <?= $form -> field($model, 'repassword') -> passwordInput(); ?>
 
                 <?= \yii\helpers\Html::submitButton('Register',['class' => 'btn btn-success']); ?>
 

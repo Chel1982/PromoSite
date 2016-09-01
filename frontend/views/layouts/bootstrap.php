@@ -1,9 +1,7 @@
 <?php
-
 \frontend\assets\MainAsset::register($this);
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
-
 ?>
 <?php $this->beginPage(); ?>
     <!DOCTYPE html>
@@ -816,6 +814,7 @@ use yii\bootstrap\Nav;
 
     <!-- initialize jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap -->
 
 
     <?php $this->endBody(); ?>
@@ -823,4 +822,4 @@ use yii\bootstrap\Nav;
     </body>
     </html>
 
-    <?php $this->endPage(); ?>
+<?php $this->endPage(); ?>

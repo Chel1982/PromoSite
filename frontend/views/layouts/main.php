@@ -1,16 +1,11 @@
 <?php
-
 \frontend\assets\MainAsset::register($this);
-
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
-
 ?>
-
-<?php $this->beginPage() ?>
-
+<?php $this->beginPage(); ?>
     <!DOCTYPE html>
-    <html lang="<?= Yii::$app -> language ?>">
+    <html lang="<?= Yii::$app -> language; ?>">
     <head>
 
         <?= Html::csrfMetaTags(); ?>
@@ -23,7 +18,7 @@ use yii\bootstrap\Nav;
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/icon" href="source/images/favicon.ico"/>
 
-        <?php $this->head() ?>
+        <?php $this->head(); ?>
 
         <!-- Fonts -->
         <!-- Open Sans for body font -->
@@ -41,17 +36,7 @@ use yii\bootstrap\Nav;
     </head>
     <body>
 
-    <?php $this->beginBody() ?>
-
-    <!-- BEGAIN PRELOADER -->
-    <div id="preloader">
-        <div class="loader">&nbsp;</div>
-    </div>
-    <!-- END PRELOADER -->
-
-    <!-- SCROLL TOP BUTTON -->
-    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
-    <!-- END SCROLL TOP BUTTON -->
+    <?php $this->beginBody(); ?>
 
     <!-- Start header section -->
     <header id="header">
@@ -78,43 +63,20 @@ use yii\bootstrap\Nav;
     </header>
     <!-- End header section -->
 
-    <!-- Start menu section -->
-    <section id="menu-area">
-        <nav class="navbar navbar-default main-navbar" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- LOGO -->
-                    <a class="navbar-brand logo" href="index.html"><img src="source/images/logo.jpg" alt="logo"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#team">TEAM</a></li>
-                        <li><a href="#service">SERVICE</a></li>
-                        <li><a href="#portfolio">PORTFOLIO</a></li>
-                        <li><a href="#pricing-table">PRICE </a></li>
-                        <li><a href="#from-blog">BLOG </a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-                <div class="search-area">
-                    <form action="">
-                        <input id="search" name="search" type="text" placeholder="What're you looking for ?">
-                        <input id="search_submit" value="Rechercher" type="submit">
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </section>
-    <!-- End menu section -->
+    <!-- BEGAIN PRELOADER -->
+    <div id="preloader">
+        <div class="loader">&nbsp;</div>
+    </div>
+    <!-- END PRELOADER -->
+
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+
+    <?= $this -> render('//common/head'); ?>
+
+
 
     <!-- Start about section -->
     <section id="about">
@@ -848,40 +810,15 @@ use yii\bootstrap\Nav;
     </section>
     <!-- End Google Map -->
 
-    <!-- Start Footer -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="footer-top-area">
-                            <a class="footer-logo" href="#"><img src="source/images/logo.jpg" alt="Logo"></a>
-                            <div class="footer-social">
-                                <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
-                                <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
-                                <a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>
-                                <a class="youtube" href="#"><span class="fa fa-youtube"></span></a>
-                                <a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>
-                                <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>Designed by <a rel="nofollow" href="http://www.markups.io/">MarkUps.io</a></p>
-        </div>
-    </footer>
-    <!-- End Footer -->
+    <?= $this -> render('//common/footer') ?>
 
     <!-- initialize jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 
-<?php $this->endBody() ?>
+    <?php $this->endBody(); ?>
 
-</body>
-</html>
+    </body>
+    </html>
 
-<?php $this->endPage() ?>
+<?php $this->endPage(); ?>
