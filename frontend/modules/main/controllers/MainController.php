@@ -16,7 +16,8 @@ class MainController extends \yii\web\Controller
 
     public function actionLogin()
     {
-        return $this->render('login');
+        $model = new SignupForm();
+        return $this->render('login', ['model' => $model]);
 
     }
 
