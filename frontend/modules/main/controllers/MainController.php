@@ -2,7 +2,7 @@
 
 namespace app\modules\main\controllers;
 
-use frontend\models\LoginForm;
+use common\models\LoginForm;
 use frontend\models\ContactForm;
 use frontend\models\SignupForm;
 
