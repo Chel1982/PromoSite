@@ -2,6 +2,7 @@
 
 namespace app\modules\main\controllers;
 
+use frontend\models\LoginForm;
 use frontend\models\ContactForm;
 use frontend\models\SignupForm;
 
@@ -16,7 +17,7 @@ class MainController extends \yii\web\Controller
 
     public function actionLogin()
     {
-        $model = new SignupForm();
+        $model = new LoginForm();
         return $this->render('login', ['model' => $model]);
 
     }

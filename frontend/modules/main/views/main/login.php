@@ -8,7 +8,7 @@
         <?= $form -> field($model, 'password') -> passwordInput(); ?>
         <?= $form -> field($model, 'repassword') -> passwordInput(); ?>
 
-        <?= \yii\helpers\Html::submitButton('Register',['class' => 'btn btn-success']); ?>
+        <?= \yii\helpers\Html::submitButton('Login',['class' => 'btn btn-success']); ?>
 
         <?php \yii\bootstrap\ActiveForm::end(); ?>
 
