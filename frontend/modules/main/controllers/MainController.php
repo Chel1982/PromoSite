@@ -14,15 +14,23 @@ class MainController extends \yii\web\Controller
         return $this->render('index');
     }
 
+    public function actionLogin()
+    {
+        return $this->render('login');
+
+    }
+
     public function actionRegister()
     {
         $model = new SignupForm();
-        if ($model -> load(\Yii::$app -> request -> post())){
-            print_r ($model -> getAttributes());
-            die;
-        }
 
-        return $this->render('register', ['model' => $model]);
+        if ($model -> load(\Yii::$app -> request -> post())){
+            $model -> signup();
+        }
+        if ($model -> load(\Yii::$app -> request -> post() && $model -> signup())) {
+            \Yii::$app -> session -> setFlash('success', 'Вы успешно зарегестрированы');
+        }
+            return $this->render('register', ['model' => $model]);
     }
 
     public function actionContact()
