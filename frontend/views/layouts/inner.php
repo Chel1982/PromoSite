@@ -22,17 +22,6 @@ use yii\bootstrap\Nav;
 
     <?php $this->head(); ?>
 
-    <!-- Fancybox slider -->
-    <link rel="stylesheet" href="source/css/jquery.fancybox.css" type="text/css" media="screen" />
-    <!-- Animate css -->
-    <link rel="stylesheet" type="text/css" href="source/css/animate.css"/>
-    <!-- Theme color -->
-    <link id="switcher" href="source/css/theme-color/default.css" rel="stylesheet">
-
-    <link href="source/preloader.css" rel="stylesheet">
-    <!-- Main Style -->
-    <link href="source/style.css" rel="stylesheet">
-
     <!-- Fonts -->
     <!-- Open Sans for body font -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>

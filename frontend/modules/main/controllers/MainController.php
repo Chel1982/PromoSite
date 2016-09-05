@@ -20,6 +20,7 @@ class MainController extends \yii\web\Controller
     public function actionLogin()
     {
         $model = new LoginForm();
+
         return $this->render('login', ['model' => $model]);
 
     }
@@ -28,25 +29,25 @@ class MainController extends \yii\web\Controller
     {
         $model = new SignupForm();
 
-        if (\Yii::$app -> request -> isAjax && \Yii::$app -> request -> isPost){
-            if ($model -> load(\Yii::$app -> request -> post())){
-                \Yii::$app -> response -> format = Response::FORMAT_JSON;
+        if (\Yii::$app->request->isAjax && \Yii::$app->request->isPost) {
+            if ($model->load(\Yii::$app->request->post())) {
+                \Yii::$app->response->format = Response::FORMAT_JSON;
                 return ActiveForm::validate($model);
             }
 
-            if ($model -> load(\Yii::$app -> request -> post() && $model -> signup())) {
+            if ($model->load(\Yii::$app->request->post() && $model->signup())) {
                 \Yii::$app->session->setFlash('success', 'Вы успешно зарегестрированы');
             }
         }
-            return $this->render('register', ['model' => $model]);
+        return $this->render('register', ['model' => $model]);
     }
 
     public function actionContact()
     {
         //$this -> layout = 'bootstrap';
         $model = new ContactForm();
-        if ($model -> load(\Yii::$app -> request -> post())){
-            print_r ($model -> getAttributes());
+        if ($model->load(\Yii::$app->request->post())) {
+            print_r($model->getAttributes());
             die;
         }
         return $this->render('contact', ['model' => $model]);
