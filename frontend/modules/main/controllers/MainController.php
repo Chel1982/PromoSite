@@ -5,6 +5,8 @@ namespace app\modules\main\controllers;
 use common\models\LoginForm;
 use frontend\models\ContactForm;
 use frontend\models\SignupForm;
+use yii\base\Response;
+use yii\bootstrap\ActiveForm;
 
 class MainController extends \yii\web\Controller
 {
@@ -26,11 +28,15 @@ class MainController extends \yii\web\Controller
     {
         $model = new SignupForm();
 
-        if ($model -> load(\Yii::$app -> request -> post())){
-            $model -> signup();
-        }
-        if ($model -> load(\Yii::$app -> request -> post() && $model -> signup())) {
-            \Yii::$app -> session -> setFlash('success', 'Вы успешно зарегестрированы');
+        if (\Yii::$app -> request -> isAjax && \Yii::$app -> request -> isPost){
+            if ($model -> load(\Yii::$app -> request -> post())){
+                \Yii::$app -> response -> format = Response::FORMAT_JSON;
+                return ActiveForm::validate($model);
+            }
+
+            if ($model -> load(\Yii::$app -> request -> post() && $model -> signup())) {
+                \Yii::$app->session->setFlash('success', 'Вы успешно зарегестрированы');
+            }
         }
             return $this->render('register', ['model' => $model]);
     }
