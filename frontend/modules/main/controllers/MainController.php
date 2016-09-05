@@ -34,10 +34,10 @@ class MainController extends \yii\web\Controller
                 \Yii::$app->response->format = Response::FORMAT_JSON;
                 return ActiveForm::validate($model);
             }
+        }
+        if ($model->load(\Yii::$app->request->post()) && $model->signup()) {
 
-            if ($model->load(\Yii::$app->request->post() && $model->signup())) {
-                \Yii::$app->session->setFlash('success', 'Вы успешно зарегестрированы');
-            }
+            \Yii::$app->session->setFlash('success', 'Register Success');
         }
         return $this->render('register', ['model' => $model]);
     }
