@@ -1,4 +1,3 @@
-<!-- Start Contact section -->
 <section id="contact">
     <div class="container">
         <div class="row">
@@ -7,21 +6,21 @@
                     <h2>Contact with us</h2>
                     <address class="single-address">
                         <h4>Postal address:</h4>
-                        <p>PO Box 16122 Collins Street West Victoria 8007 Australia</p>
+                        <p><?= Yii::$app->params['Postal address']; ?></p>
                     </address>
                     <address class="single-address">
                         <h4>Headquarters:</h4>
-                        <p>121 King Street, Melbourne Victoria 3000 Australia</p>
+                        <p><?= Yii::$app->params['Headquarters']; ?></p>
                     </address>
                     <address class="single-address">
                         <h4>Phone</h4>
-                        <p>Phone Number: (123) 456 7890</p>
-                        <p>Fax Number: (123) 456 7890</p>
+                        <p><?= Yii::$app->params['Phone']['Phone Number']; ?></p>
+                        <p><?= Yii::$app->params['Phone']['Fax Number']; ?></p>
                     </address>
                     <address class="single-address">
                         <h4>E-Mail</h4>
-                        <p>Support: Support@example.com</p>
-                        <p>Sales: sales@example.com</p>
+                        <p><?= Yii::$app->params['E-Mail']['Support']; ?></p>
+                        <p><?= Yii::$app->params['E-Mail']['Sales']; ?></p>
                     </address>
                 </div>
             </div>

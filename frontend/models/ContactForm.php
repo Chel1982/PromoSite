@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
+use frontend\models\Contact;
 
 /**
  * ContactForm is the model behind the contact form.
@@ -29,7 +30,6 @@ class ContactForm extends Model
             ['email', 'required'],
             ['email', 'email'],
             ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
 
             ['textArea', 'trim'],
             ['textArea', 'required'],

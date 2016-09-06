@@ -17,8 +17,6 @@ return [
         ],
     ],
     'components' => [
-        'defaultRoute' => 'main',
-
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
