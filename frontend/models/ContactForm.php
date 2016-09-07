@@ -4,7 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
-use frontend\models\Contact;
+use common\models\Contact;
 
 /**
  * ContactForm is the model behind the contact form.
@@ -14,7 +14,6 @@ class ContactForm extends Model
     public $name;
     public $email;
     public $textArea;
-
 
     /**
      * @inheritdoc
@@ -37,29 +36,18 @@ class ContactForm extends Model
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function attributeLabels()
+    public function contact()
     {
-        return [
-            'verifyCode' => 'Verification Code',
-        ];
+        if (!$this->validate()) {
+            return null;
+        }
+
+        $contact = new Contact();
+        $contact->name = $this->name;
+        $contact->email = $this->email;
+        $contact->textArea = $this->textArea;
+
+        return $contact->save() ? $contact : null;
     }
 
-    /**
-     * Sends an email to the specified email address using the information collected by this model.
-     *
-     * @param string $email the target email address
-     * @return boolean whether the email was sent
-     */
-    public function sendEmail($email)
-    {
-        return Yii::$app->mailer->compose()
-            ->setTo($email)
-            ->setFrom([$this->email => $this->name])
-            ->setSubject($this->subject)
-            ->setTextBody($this->body)
-            ->send();
-    }
 }

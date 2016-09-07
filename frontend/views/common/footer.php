@@ -22,5 +22,6 @@
     <div class="footer-bottom">
         <p>Designed by <a rel="nofollow" href="http://www.markups.io/">MarkUps.io</a></p>
     </div>
+
 </footer>
 <!-- End Footer -->

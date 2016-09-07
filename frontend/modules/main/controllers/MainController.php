@@ -2,9 +2,9 @@
 
 namespace app\modules\main\controllers;
 
-use frontend\models\Contact;
 use common\models\LoginForm;
 use frontend\models\ContactForm;
+use frontend\models\Register;
 use frontend\models\SignupForm;
 use yii\base\Response;
 use yii\bootstrap\ActiveForm;
@@ -30,27 +30,22 @@ class MainController extends \yii\web\Controller
     {
         $model = new SignupForm();
 
-        if (\Yii::$app->request->isAjax && \Yii::$app->request->isPost) {
-            if ($model->load(\Yii::$app->request->post())) {
-                \Yii::$app->response->format = Response::FORMAT_JSON;
-                return ActiveForm::validate($model);
-            }
-        }
         if ($model->load(\Yii::$app->request->post()) && $model->signup()) {
 
-            \Yii::$app->session->setFlash('success', 'Register Success');
+            return $this->render('register', ['model' => $model]);
         }
         return $this->render('register', ['model' => $model]);
+
     }
 
     public function actionContact()
     {
-        //$this -> layout = 'bootstrap';
         $model = new ContactForm();
-        if ($model->load(\Yii::$app->request->post())) {
 
+        if ($model->load(\Yii::$app->request->post()) && $model->contact()) {
+            return $this->render('contact', ['model' => $model]);
+        } else {
+            return $this->render('contact', ['model' => $model]);
         }
-        return $this->render('contact', ['model' => $model]);
     }
-
 }
