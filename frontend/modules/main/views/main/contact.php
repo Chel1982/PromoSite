@@ -1,3 +1,8 @@
+<?php if (\Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
+    <div class="alert alert-success">
+        Thank you from message.
+    </div>
+<?php endif; ?>
 <section id="contact">
     <div class="container">
         <div class="row">
@@ -48,5 +53,7 @@
             </div>
         </div>
     </div>
+
 </section>
+
 <!-- End Contact section -->

@@ -14,7 +14,7 @@
 
         <?php \yii\bootstrap\ActiveForm::end();?>
 
-        <?php if (\Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
+        <?php if (\Yii::$app->session->hasFlash('registerFormSubmitted')): ?>
             <div class="alert alert-success">
                 Thank you for contacting us. We will respond to you as soon as possible.
             </div>
