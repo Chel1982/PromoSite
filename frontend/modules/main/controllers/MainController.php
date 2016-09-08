@@ -20,10 +20,20 @@ class MainController extends \yii\web\Controller
 
     public function actionLogin()
     {
-        $model = new LoginForm();
+        $model = new LoginForm;
 
-        return $this->render('login', ['model' => $model]);
+        if ($model->load(\Yii::$app->request->post()) && $model->login()) {
 
+        }
+
+        return $this->render("login", ['model' => $model]);
+    }
+
+    public function actionLogout()
+    {
+
+        \Yii::$app->user->logout();
+        return $this->goHome();
     }
 
     public function actionRegister()
@@ -32,10 +42,11 @@ class MainController extends \yii\web\Controller
 
         if ($model->load(\Yii::$app->request->post()) && $model->signup()) {
 
+            \Yii::$app->session->setFlash('contactFormSubmitted');
+            return $this->render('register', ['model' => $model]);
+        } else {
             return $this->render('register', ['model' => $model]);
         }
-        return $this->render('register', ['model' => $model]);
-
     }
 
     public function actionContact()

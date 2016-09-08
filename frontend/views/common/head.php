@@ -25,6 +25,7 @@
                     <li><a href="#from-blog">BLOG </a></li>
                     <li><a href="contact">CONTACT</a></li>
                     <li><a href="login">LOGIN</a></li>
+                    <li><a href="logout">LOGOUT</a></li>
                     <li><a href="register">REGISTER</a></li>
                 </ul>
             </div><!--/.nav-collapse -->

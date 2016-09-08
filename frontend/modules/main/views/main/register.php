@@ -1,11 +1,7 @@
 <div class="row register">
     <div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 ">
-
         <?php
-            $form = \yii\bootstrap\ActiveForm::begin([
-                'enableClientValidation' => false,
-                'enableAjaxValidation' => true,
-            ]);
+        $form = \yii\bootstrap\ActiveForm::begin();
         ?>
 
         <?= $form->field($model,'username');?>
@@ -17,6 +13,13 @@
 
 
         <?php \yii\bootstrap\ActiveForm::end();?>
+
+        <?php if (\Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
+            <div class="alert alert-success">
+                Thank you for contacting us. We will respond to you as soon as possible.
+            </div>
+        <?php endif; ?>
+
     </div>
 
 </div>

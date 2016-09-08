@@ -17,6 +17,7 @@ return [
             'rules' => [
                 'contact' => '/main/main/contact',
                 'login' => '/main/main/login',
+                'logout' => '/main/main/logout',
                 'register' => '/main/main/register',
                 '/' => 'site/index',
             ],

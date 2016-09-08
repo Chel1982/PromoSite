@@ -42,20 +42,7 @@ use yii\bootstrap\Nav;
 <?= $this -> render('//common/head'); ?>
 
 
-<?php if (Yii::$app -> session -> hasFlash('success')):
 
-    $success = Yii::$app -> session -> getFlash('success');
-
-    echo \yii\bootstrap\Alert::widget([
-        'options' => [
-            'class' => 'alert-info'
-        ],
-        'body' => $success,
-    ])
-
-    ?>
-
-<?php endif; ?>
 
 <?= $content ?>
 
