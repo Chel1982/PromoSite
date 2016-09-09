@@ -41,12 +41,7 @@ use yii\bootstrap\Nav;
 
 <?= $this -> render('//common/head'); ?>
 
-
-
-
 <?= $content ?>
-
-
 
 <?= $this -> render('//common/footer'); ?>
 
