@@ -16,14 +16,14 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="home">Home</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#team">TEAM</a></li>
                     <li><a href="#service">SERVICE</a></li>
                     <li><a href="#portfolio">PORTFOLIO</a></li>
                     <li><a href="#pricing-table">PRICE </a></li>
                     <li><a href="#from-blog">BLOG </a></li>
-                    <li><a href="contact">CONTACT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                     <li><a href="login">LOGIN</a></li>
                     <li><a href="logout">LOGOUT</a></li>
                     <li><a href="register">REGISTER</a></li>

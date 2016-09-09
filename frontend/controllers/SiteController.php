@@ -22,4 +22,9 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionAbout()
+    {
+        return $this->render('about');
+    }
+
 }

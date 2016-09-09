@@ -15,7 +15,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-
+                'home' => 'site/index',
                 'contact' => '/main/main/contact',
                 'login' => '/main/main/login',
                 'logout' => '/main/main/logout',

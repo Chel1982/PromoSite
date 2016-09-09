@@ -22,9 +22,7 @@ class MainController extends \yii\web\Controller
     {
         $model = new LoginForm;
 
-        if ($model->load(\Yii::$app->request->post()) && $model->login()) {
-
-        }
+        $model->load(\Yii::$app->request->post()) && $model->login();
 
         return $this->render("login", ['model' => $model]);
     }
@@ -46,21 +44,6 @@ class MainController extends \yii\web\Controller
             return $this->render('register', ['model' => $model]);
         } else {
             return $this->render('register', ['model' => $model]);
-        }
-    }
-
-    public function actionContact()
-    {
-        $model = new ContactForm();
-
-        if ($model->load(\Yii::$app->request->post()) && $model->contact()) {
-
-            \Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->render('contact', ['model' => $model]);
-
-        } else {
-            return $this->render('contact', ['model' => $model]);
         }
     }
 }
