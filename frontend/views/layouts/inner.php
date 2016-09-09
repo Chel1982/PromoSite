@@ -1,12 +1,16 @@
 <?php
 
 \frontend\assets\MainAsset::register($this);
+
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
+use common\widgets\MenuWidget;
+use common\widgets\FooterWidget;
 
 ?>
+
 <?php $this->beginPage(); ?>
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="<?= Yii::$app -> language; ?>">
 <head>
 
@@ -39,11 +43,15 @@ use yii\bootstrap\Nav;
 <body>
 <?php $this->beginBody(); ?>
 
-<?= $this -> render('//common/head'); ?>
+<!-- Start menu section -->
+<?= MenuWidget::widget(); ?>
+<!-- End menu section -->
 
 <?= $content ?>
 
-<?= $this -> render('//common/footer'); ?>
+<!-- Start Footer -->
+<?= FooterWidget::widget(); ?>
+<!-- End Footer -->
 
 <?php $this->endBody(); ?>
 

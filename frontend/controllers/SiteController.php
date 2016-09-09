@@ -5,6 +5,7 @@ use yii\web\Controller;
 use common\models\LoginForm;
 use frontend\models\Register;
 use frontend\models\SignupForm;
+use common\widgets\AboutWidget;
 
 
 /**

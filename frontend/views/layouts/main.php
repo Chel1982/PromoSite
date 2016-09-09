@@ -4,6 +4,7 @@
 use yii\helpers\Html;
 use common\widgets\AboutWidget;
 use common\widgets\HeaderContentWidget;
+use common\widgets\MenuWidget;
 use common\widgets\TeamWidget;
 use common\widgets\ServiceWidget;
 use common\widgets\PortfolioWidget;
@@ -13,6 +14,7 @@ use common\widgets\TestimonialWidget;
 use common\widgets\BlogWidget;
 use common\widgets\ContactWidget;
 use common\widgets\ClientWidget;
+use common\widgets\FooterWidget;
 
 ?>
 
@@ -71,7 +73,9 @@ use common\widgets\ClientWidget;
     <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
     <!-- END SCROLL TOP BUTTON -->
 
-    <?= $this -> render('//common/head'); ?>
+    <!-- Start menu section -->
+    <?= MenuWidget::widget(); ?>
+    <!-- End menu section -->
 
     <!-- Start about section -->
     <?= AboutWidget::widget(); ?>
@@ -120,10 +124,14 @@ use common\widgets\ClientWidget;
     </section>
     <!-- End Google Map -->
 
-    <?= $this -> render('//common/footer') ?>
+
 
     <!-- initialize jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Start Footer -->
+    <?= FooterWidget::widget(); ?>
+    <!-- End Footer -->
 
     <?php $this->endBody(); ?>
 
