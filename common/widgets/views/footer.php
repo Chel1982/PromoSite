@@ -6,12 +6,12 @@
                     <div class="footer-top-area">
                         <a class="footer-logo" href="#"><img src="source/images/logo.jpg" alt="Logo"></a>
                         <div class="footer-social">
-                            <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
-                            <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
-                            <a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>
-                            <a class="youtube" href="#"><span class="fa fa-youtube"></span></a>
-                            <a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>
-                            <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a>
+                            <?= Yii::$app->params['facebook']; ?>
+                            <?= Yii::$app->params['twitter']; ?>
+                            <?= Yii::$app->params['google-plus']; ?>
+                            <?= Yii::$app->params['youtube']; ?>
+                            <?= Yii::$app->params['linkedin']; ?>
+                            <?= Yii::$app->params['dribbble']; ?>
                         </div>
                     </div>
                 </div>

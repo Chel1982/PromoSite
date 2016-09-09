@@ -12,4 +12,10 @@ return [
                 explicabo.</p>
                 <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur 
                 magni dolores e</p>',
+    'facebook' => '<a class="facebook" href="#"><span class="fa fa-facebook"></span></a>',
+    'twitter' => '<a class="twitter" href="#"><span class="fa fa-twitter"></span></a>',
+    'google-plus' => '<a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>',
+    'youtube' => '<a class="youtube" href="#"><span class="fa fa-youtube"></span></a>',
+    'linkedin' => '<a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>',
+    'dribbble' => '<a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a>',
 ];

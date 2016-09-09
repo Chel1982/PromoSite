@@ -66,8 +66,8 @@
                                     <div class="team-info">
                                         <p> I must explain to you how all this mistaken idea of denouncing pleasure
                                             n</p>
-                                        <a href="#"><span class="fa fa-facebook"></span></a>
-                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                        <?= Yii::$app->params['facebook']; ?>
+                                        <?= Yii::$app->params['twitter']; ?>
                                         <a href="#"><span class="fa fa-pinterest"></span></a>
                                         <a href="#"><span class="fa fa-rss"></span></a>
                                     </div>
