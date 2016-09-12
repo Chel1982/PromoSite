@@ -1,3 +1,7 @@
+<?php
+use yii\bootstrap\Nav;
+
+?>
 <section id="menu-area">
     <nav class="navbar navbar-default main-navbar" role="navigation">
         <div class="container">
@@ -11,22 +15,40 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- LOGO -->
-                <a class="navbar-brand logo" href="index.html"><img src="source/images/logo.jpg" alt="logo"></a>
+                <a class="navbar-brand logo" href="/"><img src="source/images/logo.jpg" alt="logo"></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-                    <li class="active"><a href="home">Home</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#team">TEAM</a></li>
-                    <li><a href="#service">SERVICE</a></li>
-                    <li><a href="#portfolio">PORTFOLIO</a></li>
-                    <li><a href="#pricing-table">PRICE </a></li>
-                    <li><a href="#from-blog">BLOG </a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="login">LOGIN</a></li>
-                    <li><a href="logout">LOGOUT</a></li>
-                    <li><a href="register">REGISTER</a></li>
-                </ul>
+
+                <?= Nav::widget([
+                    'items' => [
+                        ['label' => 'HOME', 'url' => ['/']],
+                        ['label' => 'ABOUT', 'url' => ['/#about']],
+                        ['label' => 'TEAM', 'url' => ['/#team']],
+                        ['label' => 'SERVICE', 'url' => ['/#service']],
+                        ['label' => 'PORTFOLIO', 'url' => ['/#portfolio']],
+                        ['label' => 'PRICE', 'url' => ['/#pricing-table']],
+                        ['label' => 'BLOG', 'url' => ['/#from-blog']],
+                        ['label' => 'CONTACT', 'url' => ['/#contact']],
+
+                        Yii::$app->user->isGuest ?
+
+                            ['label' => 'LOGIN', 'url' => ['/site/login']]
+                            :
+                            [
+                                'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                                'url' => ['/site/logout']
+                            ],
+
+                        ['label' => 'REGISTER', 'url' => ['/site/register']],
+
+                    ],
+                    'options' => [
+                        'class' => 'nav navbar-nav menu-scroll active',
+                    ],
+                ]);
+
+                ?>
+
             </div><!--/.nav-collapse -->
             <div class="search-area">
                 <form action="">

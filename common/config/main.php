@@ -15,12 +15,6 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'about' => 'site/about',
-                'home' => 'site/index',
-                'login' => '/site/login',
-                'logout' => '/site/logout',
-                'register' => '/site/register',
-                '/' => 'site/index',
             ],
         ],
     ],

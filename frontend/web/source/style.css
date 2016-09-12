@@ -2980,13 +2980,5 @@ img{
 	
 }
 
-/*Моя верстка*/
 
-.register input{padding: 10px; height: 50px;}
-.contact input{padding: 10px; height: 50px;}
-.register input,.register textarea,.contact input,.contact textarea{ margin-bottom: 15px;}
-.login button,.register button,.contact button{width: 100%;border-radius: 5px;}
-
-.row{margin-bottom: 20px;}
-.row p{margin-bottom: 5px;}
 

@@ -15,6 +15,8 @@ use common\widgets\BlogWidget;
 use common\widgets\ContactWidget;
 use common\widgets\ClientWidget;
 use common\widgets\FooterWidget;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
 
 ?>
 
@@ -72,6 +74,7 @@ use common\widgets\FooterWidget;
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
     <!-- END SCROLL TOP BUTTON -->
+
 
     <!-- Start menu section -->
     <?= MenuWidget::widget(); ?>

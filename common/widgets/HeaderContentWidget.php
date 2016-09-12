@@ -19,6 +19,6 @@ class HeaderContentWidget extends Widget
 
     public function run()
     {
-        return $this->render('header_content');
+        return $this->render('header-content');
     }
 }
