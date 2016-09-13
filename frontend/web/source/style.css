@@ -751,7 +751,7 @@ img {
 
 #team {
     display: inline;
-    padding: 70px 0px;
+    padding: 150px 0px;
     float: left;
     width: 100%;
 }
@@ -922,7 +922,7 @@ img {
     background-color: #F6F6F6;
     float: left;
     display: inline;
-    padding: 70px 0;
+    padding: 150px 0;
     width: 100%;
 }
 
@@ -1007,7 +1007,7 @@ img {
 #portfolio {
     display: inline;
     float: left;
-    padding: 70px 0;
+    padding: 150px 0;
     width: 100%;
 }
 
@@ -1253,7 +1253,7 @@ img {
 #pricing-table {
     display: inline;
     float: left;
-    padding: 70px 0;
+    padding: 150px 0;
     width: 100%;
 }
 
@@ -1512,7 +1512,7 @@ img {
 #from-blog {
     background-color: #F6F6F6;
     display: inline;
-    padding: 70px 0;
+    padding: 150px 0;
     float: left;
     width: 100%;
 }
@@ -1669,7 +1669,7 @@ img {
     background-size: 100% 100%;
     display: inline;
     float: left;
-    padding: 70px 0;
+    padding: 150px 0;
     width: 100%;
 }
 
