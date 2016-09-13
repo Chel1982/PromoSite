@@ -1,6 +1,5 @@
 <?php
 use yii\bootstrap\Nav;
-
 ?>
 <section id="menu-area">
     <nav class="navbar navbar-default main-navbar" role="navigation">
@@ -19,7 +18,9 @@ use yii\bootstrap\Nav;
             </div>
             <div id="navbar" class="navbar-collapse collapse">
 
-                <?= Nav::widget([
+                <?=
+
+                Nav::widget([
                     'items' => [
                         ['label' => 'HOME', 'url' => ['/']],
                         ['label' => 'ABOUT', 'url' => ['/#about']],
@@ -38,8 +39,12 @@ use yii\bootstrap\Nav;
                                 'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                                 'url' => ['/site/logout']
                             ],
+                        Yii::$app->user->isGuest ?
 
-                        ['label' => 'REGISTER', 'url' => ['/site/register']],
+                            ['label' => 'REGISTER', 'url' => ['/site/register']]
+                            :
+                            ['label' => ''],
+
 
                     ],
                     'options' => [
