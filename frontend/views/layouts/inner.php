@@ -47,7 +47,7 @@ use common\widgets\FooterWidget;
 <?= MenuWidget::widget(); ?>
 <!-- End menu section -->
 
-<?= $content ?>
+<?= $content; ?>
 
 <!-- Start Footer -->
 <?= FooterWidget::widget(); ?>

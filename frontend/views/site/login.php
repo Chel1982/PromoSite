@@ -5,7 +5,7 @@
 
             <?php if ($model->load(\Yii::$app->request->post()) && $model->login()): ?>
 
-                <?= 'Добро пожаловать, ' . Yii::$app->user->identity->username; ?>
+                <?= 'Welcome, ' . Yii::$app->user->identity->username; ?>
 
             <?php endif; ?>
 

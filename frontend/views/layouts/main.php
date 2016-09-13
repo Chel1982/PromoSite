@@ -20,12 +20,12 @@ use common\widgets\FooterWidget;
 
 <?php $this->beginPage(); ?>
     <!DOCTYPE html>
-    <html lang="<?= Yii::$app -> language; ?>">
+    <html lang="<?= Yii::$app->language; ?>">
     <head>
 
         <?= Html::csrfMetaTags(); ?>
 
-        <meta charset="<?= Yii::$app -> charset; ?>" />
+        <meta charset="<?= Yii::$app->charset; ?>"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -53,15 +53,27 @@ use common\widgets\FooterWidget;
 
     <?php $this->beginBody(); ?>
 
-    <?php if (\Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
-        <div class="alert alert-success">
-            <p>Thank you from message.</p>
-        </div>
+
+    <?php if (\Yii::$app->session->hasFlash('success')): ?>
+
+        <?php
+
+        $success = \Yii::$app->session->getFlash('success');
+
+        echo \yii\bootstrap\Alert::widget([
+            'options' => [
+                'class' => 'alert-info'
+            ],
+            'body' => $success
+        ])
+        ?>
+
     <?php endif; ?>
 
     <!-- Start header section -->
     <?= HeaderContentWidget::widget(); ?>
     <!-- End header section -->
+
 
     <!-- BEGAIN PRELOADER -->
     <div id="preloader">
@@ -121,10 +133,11 @@ use common\widgets\FooterWidget;
 
     <!-- Start Google Map -->
     <section id="google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d6303.67022361714!2d144.955652!3d-37.817331!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-37.8173306!2d144.9556518!5e0!3m2!1sen!2sbd!4v1442411159706" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d6303.67022361714!2d144.955652!3d-37.817331!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-37.8173306!2d144.9556518!5e0!3m2!1sen!2sbd!4v1442411159706"
+            width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
     <!-- End Google Map -->
-
 
 
     <!-- initialize jQuery Library -->

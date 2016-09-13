@@ -22,7 +22,7 @@ class ContactWidget extends Widget
         $this->model = new ContactForm();
         if ($this->model->load(\Yii::$app->request->post()) && $this->model->contact()) {
 
-            \Yii::$app->session->setFlash('contactFormSubmitted');
+            \Yii::$app->session->setFlash('success', 'You message important for us');
 
         } else {
 
