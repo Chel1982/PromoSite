@@ -2459,7 +2459,7 @@ img {
     }
 
     #navbar {
-        width: 87%;
+        width: 95%;
     }
 
     .main-nav li a {
@@ -3456,9 +3456,4 @@ img {
     .popular-post-widget .media-body {
         text-align: center;
     }
-}
-
-/*My note*/
-.active {
-    padding-top: 25px;
 }
