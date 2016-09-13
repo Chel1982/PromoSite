@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer-top-area">
-                        <a class="footer-logo" href="#"><img src="source/images/logo.jpg" alt="Logo"></a>
+                        <a class="footer-logo" href="#"><img src="/source/images/logo.jpg" alt="Logo"></a>
                         <div class="footer-social">
                             <?= Yii::$app->params['facebook']; ?>
                             <?= Yii::$app->params['twitter']; ?>

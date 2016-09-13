@@ -15,9 +15,9 @@ use yii\bootstrap\Nav;
                     <span class="icon-bar"></span>
                 </button>
                 <!-- LOGO -->
-                <a class="navbar-brand logo" href="/"><img src="source/images/logo.jpg" alt="logo"></a>
+                <a class="navbar-brand logo" href="/"><img src="/source/images/logo.jpg" alt="logo"></a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse nav-menu">
 
                 <?=
 
